@@ -5,11 +5,11 @@ from rest_framework.authtoken import views
 from api.views import PostViewSet, CommentViewSet, GroupViewSet
 
 v1_router = routers.DefaultRouter()
-v1_router.register('posts', PostViewSet, basename='post')
+v1_router.register('posts', PostViewSet, basename='posts')
 v1_router.register(
     r'posts/(?P<post_id>[\d+]+)/comments',
     CommentViewSet,
-    basename='comment'
+    basename='comments'
 )
 v1_router.register('groups', GroupViewSet)
 
